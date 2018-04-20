@@ -17,8 +17,22 @@
 		A5438E66207E627B004C01DA /* SearchRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5438E65207E627B004C01DA /* SearchRowCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A5F17B192088B5F300B9069D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5A16F51F714EBC0199FBF2B5 /* Pods-TypeAheadSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypeAheadSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TypeAheadSearch/Pods-TypeAheadSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		A524FF182088BE6100207463 /* TypeAheadSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TypeAheadSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5438E4E207E5E24004C01DA /* TypeAheadSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypeAheadSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5438E51207E5E24004C01DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5438E53207E5E24004C01DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +82,7 @@
 				A5438E4F207E5E24004C01DA /* Products */,
 				51575A1CE403AF72C298150D /* Pods */,
 				76F24A6FA0C721107E4B5BEC /* Frameworks */,
+				A524FF182088BE6100207463 /* TypeAheadSearch-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +121,7 @@
 				A5438E4B207E5E24004C01DA /* Frameworks */,
 				A5438E4C207E5E24004C01DA /* Resources */,
 				9974F58EDD5D15B8C572252B /* [CP] Embed Pods Frameworks */,
+				A5F17B192088B5F300B9069D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +144,7 @@
 				TargetAttributes = {
 					A5438E4D207E5E24004C01DA = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,14 +365,34 @@
 			baseConfigurationReference = 5A16F51F714EBC0199FBF2B5 /* Pods-TypeAheadSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JN97A7TTS;
 				INFOPLIST_FILE = TypeAheadSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"Heap\"",
+					"-l\"icucore\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sankla.swapnil.TypeAheadSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TypeAheadSearch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,14 +403,33 @@
 			baseConfigurationReference = FA9D982486B176E8410ABED6 /* Pods-TypeAheadSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6JN97A7TTS;
 				INFOPLIST_FILE = TypeAheadSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"Heap\"",
+					"-l\"icucore\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = sankla.swapnil.TypeAheadSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TypeAheadSearch-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
