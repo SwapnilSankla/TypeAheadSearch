@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		3BCE8F12A8D57B9F3DCAB184 /* Pods_TypeAheadSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE035EDF37D661F5F765F74A /* Pods_TypeAheadSearch.framework */; };
+		A5223C2F20905D3100910A91 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5223C2E20905D3100910A91 /* SearchResultsViewController.swift */; };
 		A5438E52207E5E24004C01DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438E51207E5E24004C01DA /* AppDelegate.swift */; };
 		A5438E54207E5E24004C01DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438E53207E5E24004C01DA /* ViewController.swift */; };
-		A5438E57207E5E24004C01DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5438E55207E5E24004C01DA /* Main.storyboard */; };
 		A5438E59207E5E24004C01DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5438E58207E5E24004C01DA /* Assets.xcassets */; };
 		A5438E5C207E5E24004C01DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5438E5A207E5E24004C01DA /* LaunchScreen.storyboard */; };
 		A5438E64207E625D004C01DA /* SearchRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5438E63207E625D004C01DA /* SearchRowCell.swift */; };
 		A5438E66207E627B004C01DA /* SearchRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5438E65207E627B004C01DA /* SearchRowCell.xib */; };
+		A5F4577720907BD100E3A45A /* SearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F4577620907BD100E3A45A /* SearchResultsView.xib */; };
+		A5F4577920909B0400E3A45A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F4577820909B0400E3A45A /* View.xib */; };
+		A5F4577D2090CCB400E3A45A /* Version.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F4577C2090CCB400E3A45A /* Version.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,16 +35,19 @@
 
 /* Begin PBXFileReference section */
 		5A16F51F714EBC0199FBF2B5 /* Pods-TypeAheadSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypeAheadSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TypeAheadSearch/Pods-TypeAheadSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		A5223C2E20905D3100910A91 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		A524FF182088BE6100207463 /* TypeAheadSearch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TypeAheadSearch-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5438E4E207E5E24004C01DA /* TypeAheadSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TypeAheadSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5438E51207E5E24004C01DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5438E53207E5E24004C01DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A5438E56207E5E24004C01DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5438E58207E5E24004C01DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5438E5B207E5E24004C01DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5438E5D207E5E24004C01DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5438E63207E625D004C01DA /* SearchRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRowCell.swift; sourceTree = "<group>"; };
 		A5438E65207E627B004C01DA /* SearchRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRowCell.xib; sourceTree = "<group>"; };
+		A5F4577620907BD100E3A45A /* SearchResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsView.xib; sourceTree = "<group>"; };
+		A5F4577820909B0400E3A45A /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		A5F4577C2090CCB400E3A45A /* Version.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Version.plist; sourceTree = "<group>"; };
 		FA9D982486B176E8410ABED6 /* Pods-TypeAheadSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypeAheadSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TypeAheadSearch/Pods-TypeAheadSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FE035EDF37D661F5F765F74A /* Pods_TypeAheadSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TypeAheadSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,12 +105,15 @@
 			children = (
 				A5438E51207E5E24004C01DA /* AppDelegate.swift */,
 				A5438E53207E5E24004C01DA /* ViewController.swift */,
-				A5438E55207E5E24004C01DA /* Main.storyboard */,
+				A5F4577820909B0400E3A45A /* View.xib */,
 				A5438E63207E625D004C01DA /* SearchRowCell.swift */,
 				A5438E65207E627B004C01DA /* SearchRowCell.xib */,
 				A5438E58207E5E24004C01DA /* Assets.xcassets */,
 				A5438E5A207E5E24004C01DA /* LaunchScreen.storyboard */,
 				A5438E5D207E5E24004C01DA /* Info.plist */,
+				A5F4577C2090CCB400E3A45A /* Version.plist */,
+				A5223C2E20905D3100910A91 /* SearchResultsViewController.swift */,
+				A5F4577620907BD100E3A45A /* SearchResultsView.xib */,
 			);
 			path = TypeAheadSearch;
 			sourceTree = "<group>";
@@ -173,9 +182,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5438E66207E627B004C01DA /* SearchRowCell.xib in Resources */,
+				A5F4577920909B0400E3A45A /* View.xib in Resources */,
+				A5F4577D2090CCB400E3A45A /* Version.plist in Resources */,
 				A5438E5C207E5E24004C01DA /* LaunchScreen.storyboard in Resources */,
+				A5F4577720907BD100E3A45A /* SearchResultsView.xib in Resources */,
 				A5438E59207E5E24004C01DA /* Assets.xcassets in Resources */,
-				A5438E57207E5E24004C01DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +238,7 @@
 			files = (
 				A5438E54207E5E24004C01DA /* ViewController.swift in Sources */,
 				A5438E52207E5E24004C01DA /* AppDelegate.swift in Sources */,
+				A5223C2F20905D3100910A91 /* SearchResultsViewController.swift in Sources */,
 				A5438E64207E625D004C01DA /* SearchRowCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,14 +246,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A5438E55207E5E24004C01DA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A5438E56207E5E24004C01DA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A5438E5A207E5E24004C01DA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

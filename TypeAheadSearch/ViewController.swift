@@ -5,12 +5,18 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textInput: UITextField!
     @IBOutlet weak var searchList: UITableView!
+    @IBOutlet weak var buildNumber: UILabel!
+    
     private var searchListDataSource: SearchListDataSource?
     var masterSearchListData = [""]
 
     @IBAction func searchTapped(_ sender: Any) {
         searchList.isHidden = true
+        let searchResultsViewController = SearchResultsViewController()
+        searchResultsViewController.text = textInput.text!
+        navigationController?.pushViewController(searchResultsViewController, animated: true)
     }
+
     @IBAction func searchDidEnd(_ sender: Any) {
         searchList.isHidden = true
     }
@@ -42,10 +48,24 @@ class ViewController: UIViewController {
         searchList.delegate = searchListDataSource
         let nib = UINib(nibName: "SearchRowCell", bundle: nil)
         searchList.register(nib, forCellReuseIdentifier: "SearchRowCell")
+        setBuildNumber()
     }
 
     func setSearchText(text: String) {
         textInput.text = text
+    }
+
+    private func setBuildNumber() {
+        buildNumber.text = ""
+        if let url = Bundle.main.url(forResource: "Version", withExtension: ".plist") {
+            if let info = NSDictionary(contentsOf: url) {
+                if let appVersion = info["AppVersion"] as? String,
+                   let buildNo = info["BuildNumber"] as? String {
+                    buildNumber.text = appVersion + "." + buildNo
+                }
+            }
+        }
+
     }
 }
 

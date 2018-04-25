@@ -17,10 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Heap.setAppId("3823664673");
-        #if DEBUG
-            Heap.enableVisualizer();
-        #endif
+        Heap.track("Starting Type Ahead application")
 
+        let viewController = ViewController(nibName: "View", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.view.backgroundColor = UIColor.white
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
         return true
     }
 
