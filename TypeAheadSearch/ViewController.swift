@@ -57,12 +57,16 @@ class ViewController: UIViewController {
 
     private func setBuildNumber() {
         buildNumber.text = ""
-        if let url = Bundle.main.url(forResource: "Version", withExtension: ".plist") {
+        if let url = Bundle.main.url(forResource: "Info", withExtension: ".plist") {
             if let info = NSDictionary(contentsOf: url) {
-                if let appVersion = info["AppVersion"] as? String,
-                   let buildNo = info["BuildNumber"] as? String {
-                    buildNumber.text = appVersion + "." + buildNo
+                if let appVersion = info["CFBundleShortVersionString"] as? String {
+                    if let buildNo = info["CFBundleVersion"] as? String {
+                        buildNumber.text = appVersion + "." + buildNo
+                    } else {
+                        buildNumber.text = appVersion + "." + "DEV"
+                    }
                 }
+
             }
         }
 
