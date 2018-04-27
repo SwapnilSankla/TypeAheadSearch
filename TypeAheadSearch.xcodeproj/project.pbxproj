@@ -123,12 +123,12 @@
 			buildConfigurationList = A5438E60207E5E24004C01DA /* Build configuration list for PBXNativeTarget "TypeAheadSearch" */;
 			buildPhases = (
 				CA3743F984503FE0BA2D49F1 /* [CP] Check Pods Manifest.lock */,
+				A5F4577E2091CEFD00E3A45A /* Set version */,
 				A5438E4A207E5E24004C01DA /* Sources */,
 				A5438E4B207E5E24004C01DA /* Frameworks */,
 				A5438E4C207E5E24004C01DA /* Resources */,
 				9974F58EDD5D15B8C572252B /* [CP] Embed Pods Frameworks */,
 				A5F17B192088B5F300B9069D /* Embed Frameworks */,
-				A5F4577E2091CEFD00E3A45A /* Set version */,
 			);
 			buildRules = (
 			);
