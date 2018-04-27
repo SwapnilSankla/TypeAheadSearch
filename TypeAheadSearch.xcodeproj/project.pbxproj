@@ -17,7 +17,18 @@
 		A5438E66207E627B004C01DA /* SearchRowCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5438E65207E627B004C01DA /* SearchRowCell.xib */; };
 		A5F4577720907BD100E3A45A /* SearchResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F4577620907BD100E3A45A /* SearchResultsView.xib */; };
 		A5F4577920909B0400E3A45A /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F4577820909B0400E3A45A /* View.xib */; };
+		A5F457D12092EB2C00E3A45A /* TypeAheadSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F457D02092EB2C00E3A45A /* TypeAheadSearchUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5F457D32092EB2C00E3A45A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5438E46207E5E24004C01DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5438E4D207E5E24004C01DA;
+			remoteInfo = TypeAheadSearch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A5F17B192088B5F300B9069D /* Embed Frameworks */ = {
@@ -46,6 +57,9 @@
 		A5438E65207E627B004C01DA /* SearchRowCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchRowCell.xib; sourceTree = "<group>"; };
 		A5F4577620907BD100E3A45A /* SearchResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsView.xib; sourceTree = "<group>"; };
 		A5F4577820909B0400E3A45A /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		A5F457CE2092EB2C00E3A45A /* TypeAheadSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TypeAheadSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F457D02092EB2C00E3A45A /* TypeAheadSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeAheadSearchUITests.swift; sourceTree = "<group>"; };
+		A5F457D22092EB2C00E3A45A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA9D982486B176E8410ABED6 /* Pods-TypeAheadSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TypeAheadSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-TypeAheadSearch/Pods-TypeAheadSearch.release.xcconfig"; sourceTree = "<group>"; };
 		FE035EDF37D661F5F765F74A /* Pods_TypeAheadSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TypeAheadSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,6 +70,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BCE8F12A8D57B9F3DCAB184 /* Pods_TypeAheadSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F457CB2092EB2C00E3A45A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				A5438E50207E5E24004C01DA /* TypeAheadSearch */,
+				A5F457CF2092EB2C00E3A45A /* TypeAheadSearchUITests */,
 				A5438E4F207E5E24004C01DA /* Products */,
 				51575A1CE403AF72C298150D /* Pods */,
 				76F24A6FA0C721107E4B5BEC /* Frameworks */,
@@ -94,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				A5438E4E207E5E24004C01DA /* TypeAheadSearch.app */,
+				A5F457CE2092EB2C00E3A45A /* TypeAheadSearchUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +136,15 @@
 				A5F4577620907BD100E3A45A /* SearchResultsView.xib */,
 			);
 			path = TypeAheadSearch;
+			sourceTree = "<group>";
+		};
+		A5F457CF2092EB2C00E3A45A /* TypeAheadSearchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5F457D02092EB2C00E3A45A /* TypeAheadSearchUITests.swift */,
+				A5F457D22092EB2C00E3A45A /* Info.plist */,
+			);
+			path = TypeAheadSearchUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +171,24 @@
 			productReference = A5438E4E207E5E24004C01DA /* TypeAheadSearch.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A5F457CD2092EB2C00E3A45A /* TypeAheadSearchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F457D52092EB2C00E3A45A /* Build configuration list for PBXNativeTarget "TypeAheadSearchUITests" */;
+			buildPhases = (
+				A5F457CA2092EB2C00E3A45A /* Sources */,
+				A5F457CB2092EB2C00E3A45A /* Frameworks */,
+				A5F457CC2092EB2C00E3A45A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5F457D42092EB2C00E3A45A /* PBXTargetDependency */,
+			);
+			name = TypeAheadSearchUITests;
+			productName = TypeAheadSearchUITests;
+			productReference = A5F457CE2092EB2C00E3A45A /* TypeAheadSearchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -153,6 +203,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+					};
+					A5F457CD2092EB2C00E3A45A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A5438E4D207E5E24004C01DA;
 					};
 				};
 			};
@@ -170,6 +225,7 @@
 			projectRoot = "";
 			targets = (
 				A5438E4D207E5E24004C01DA /* TypeAheadSearch */,
+				A5F457CD2092EB2C00E3A45A /* TypeAheadSearchUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -184,6 +240,13 @@
 				A5438E5C207E5E24004C01DA /* LaunchScreen.storyboard in Resources */,
 				A5F4577720907BD100E3A45A /* SearchResultsView.xib in Resources */,
 				A5438E59207E5E24004C01DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F457CC2092EB2C00E3A45A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +317,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5F457CA2092EB2C00E3A45A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F457D12092EB2C00E3A45A /* TypeAheadSearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5F457D42092EB2C00E3A45A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5438E4D207E5E24004C01DA /* TypeAheadSearch */;
+			targetProxy = A5F457D32092EB2C00E3A45A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A5438E5A207E5E24004C01DA /* LaunchScreen.storyboard */ = {
@@ -452,6 +531,34 @@
 			};
 			name = Release;
 		};
+		A5F457D62092EB2C00E3A45A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TypeAheadSearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sankla.swapnil.TypeAheadSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TypeAheadSearch;
+			};
+			name = Debug;
+		};
+		A5F457D72092EB2C00E3A45A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TypeAheadSearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sankla.swapnil.TypeAheadSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TypeAheadSearch;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -469,6 +576,15 @@
 			buildConfigurations = (
 				A5438E61207E5E24004C01DA /* Debug */,
 				A5438E62207E5E24004C01DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5F457D52092EB2C00E3A45A /* Build configuration list for PBXNativeTarget "TypeAheadSearchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F457D62092EB2C00E3A45A /* Debug */,
+				A5F457D72092EB2C00E3A45A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

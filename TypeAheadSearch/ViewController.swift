@@ -26,20 +26,21 @@ class ViewController: UIViewController {
     }
 
     @IBAction func searchChanged(_ sender: Any) {
-        searchList.isHidden = false
         Alamofire.request("http://localhost:8080/products").responseJSON { (response) in
             if let productsJson = response.result.value as? [String: Any] {
                 self.masterSearchListData = productsJson.map({ (product) -> String in
                     product.key
                 })
+                self.searchList.isHidden = false
+                self.searchListDataSource?.textEntered = self.textInput.text!
+                self.searchList.reloadData()
             }
         }
-        searchListDataSource?.textEntered = textInput.text!
-        searchList.reloadData()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchList.accessibilityLabel = "SearchList"
         searchList.separatorColor = UIColor.clear
         searchList.isHidden = true
         searchListDataSource = SearchListDataSource()
@@ -60,7 +61,7 @@ class ViewController: UIViewController {
         if let url = Bundle.main.url(forResource: "Info", withExtension: ".plist") {
             if let info = NSDictionary(contentsOf: url) {
                 if let appVersion = info["CFBundleShortVersionString"] as? String {
-                    if let buildNo = info["CFBundleVersion"] as? String {
+                    if let buildNo = info["CFBundleVersion"] as? String, buildNo != "" {
                         buildNumber.text = appVersion + "." + buildNo
                     } else {
                         buildNumber.text = appVersion + "." + "DEV"
@@ -111,6 +112,7 @@ class SearchListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchRowCell", for: indexPath)
+        cell.accessibilityIdentifier = "SearchList_\(indexPath.row + 1)"
         if let searchRowCell = cell as? SearchRowCell {
             searchRowCell.configure(predictiveSearchListData[indexPath.row])
         }
